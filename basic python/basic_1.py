@@ -22,7 +22,7 @@ print(type(b'hello'))  # <class 'bytes'>
 print(type(bytearray([1, 2, 3])))  # <class 'bytearray'>
 print(type(memoryview(b'hello')))  # <class 'memoryview'>
 
-
+#################################################################
 
 # List of all type of condition statements example in Python
 
@@ -78,7 +78,7 @@ num = 10
 assert num > 0, "Number is not positive"
 
 
-
+################################################################
 
 # for loop examples
 
@@ -124,4 +124,64 @@ i = 0
 while i < 5:
     print(i)
     i += 1
+
+
+#################################################################
+
+
+# Function examples
+def greet(name):
+    return "Hello, " + name + "!"
+
+print(greet("Alice"))
+
+def add(a, b):
+    return a + b
+
+print(add(1, 2))
+
+def multiply(a, b=2):
+    return a * b
+
+print(multiply(3))
+print(multiply(3, 4))
+
+def multiply_and_add(a, b=2, c=3):
+    return a * b + c
+
+print(multiply_and_add(3))
+print(multiply_and_add(3, 4))
+print(multiply_and_add(3, c=5))
+
+def return_none():
+    pass
+
+print(return_none())
+
+def variable_length_arguments(*args):
+    return sum(args)
+
+print(variable_length_arguments(1, 2, 3))
+print(variable_length_arguments(*[1, 2, 3]))
+
+def variable_keyword_arguments(**kwargs):
+    return sum(kwargs.values())
+
+print(variable_keyword_arguments(a=1, b=2, c=3))
+print(variable_keyword_arguments(**{'a': 1, 'b': 2, 'c': 3}))
+
+def function_with_default_argument(a=1, b=2):
+    return a + b
+
+print(function_with_default_argument())
+print(function_with_default_argument(1))
+print(function_with_default_argument(1, 2))
+
+def function_with_default_argument_and_variable_length_arguments(a=1, *args):
+    return a + sum(args)
+
+print(function_with_default_argument_and_variable_length_arguments())
+print(function_with_default_argument_and_variable_length_arguments(1))
+print(function_with_default_argument_and_variable_length_arguments(1, 2, 3))
+print(function_with_default_argument_and_variable_length_arguments(1, *[2, 3]))
 
