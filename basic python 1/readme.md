@@ -85,6 +85,44 @@ Python provides several condition statements for control flow. Here are some exa
 - Returning `None`:
     Functions can return `None` explicitly using the `pass` statement.
 
+## variable_length_arguments(*args)
+This function takes any number of positional arguments, sums them up and returns the result.
+
+**Parameters:**
+- *args (int): Variable length argument list of integers
+
+**Returns:**
+- int: The sum of the input arguments
+
+## variable_keyword_arguments(**kwargs)
+This function takes any number of keyword arguments, sums their values and returns the result.
+
+**Parameters:**
+- **kwargs (int): Variable length keyword argument list of integers
+
+**Returns:**
+- int: The sum of the values of the input arguments
+
+## function_with_default_argument(a=1, b=2)
+This function takes two arguments with default values. If no values are provided, it uses the default values. It returns the sum of the two arguments.
+
+**Parameters:**
+- a (int, optional): The first number to add. Defaults to 1.
+- b (int, optional): The second number to add. Defaults to 2.
+
+**Returns:**
+- int: The sum of a and b
+
+## function_with_default_argument_and_variable_length_arguments(a=1, *args)
+This function takes one argument with a default value and any number of additional positional arguments. It returns the sum of the first argument and the sum of the additional arguments.
+
+**Parameters:**
+- a (int, optional): The first number to add. Defaults to 1.
+- *args (int): Variable length argument list of integers
+
+**Returns:**
+- int: The sum of a and the sum of the additional arguments
+
 ## Documentation
 This document is a Python documentation for beginners. It provides a comprehensive overview of the language, including its syntax, data types, condition statements, loops, and functions. The examples demonstrate how to use these features effectively in Python programming.
 

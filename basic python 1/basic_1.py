@@ -185,3 +185,5 @@ print(function_with_default_argument_and_variable_length_arguments(1))
 print(function_with_default_argument_and_variable_length_arguments(1, 2, 3))
 print(function_with_default_argument_and_variable_length_arguments(1, *[2, 3]))
 
+
+
