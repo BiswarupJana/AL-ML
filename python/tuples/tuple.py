@@ -86,3 +86,63 @@ del thistuple
 # print(thistuple) ## Output: NameError: name 'thistuple' is not defined
 
 
+# Join Two Tuples
+tuple1 = ("a", "b" , "c")
+tuple2 = (1, 2, 3)
+
+tuple3 = tuple1 + tuple2
+print(tuple3) ## Output: ('a', 'b', 'c', 1, 2, 3)
+
+
+
+
+# Tuple Methods
+# Python has two built-in methods that you can use on tuples.
+# count()	Returns the number of times a specified value occurs in a tuple
+# index()	Searches the tuple for a specified value and returns the position of where it was found
+
+# -----------------------------------------------------------------
+
+# Unpack Tuples
+# When we create a tuple, we normally assign values to it. This is called "packing" a tuple:
+fruits = ("apple", "banana", "cherry")
+# But, in Python, we are also allowed to extract the values back into variables. This is called "unpacking":
+(green, yellow, red) = fruits
+print(green) ## Output: apple
+print(yellow) ## Output: banana
+print(red) ## Output: cherry
+
+# Using Asterisk *
+# If the number of variables is less than the number of values, you can add an * to the variable name and the values will be assigned to the variable as a list:
+fruits = ("apple", "banana", "cherry", "strawberry", "raspberry")
+(green, yellow, *red) = fruits
+print(green) ## Output: apple
+print(yellow) ## Output: banana
+print(red) ## Output: ['cherry', 'strawberry', 'raspberry']
+
+# If the asterisk is added to another variable name than the last, Python will assign values to the variable until the number of values left matches the number of variables left.
+fruits = ("apple", "mango", "papaya", "pineapple", "cherry")
+(green, *tropic, red) = fruits
+print(green) ## Output: apple
+print(tropic) ## Output: ['mango', 'papaya', 'pineapple']
+print(red) ## Output: cherry
+
+# Loop Through a Tuple
+thistuple = ("apple", "banana", "cherry")
+for x in thistuple:
+    print(x) ## Output: apple, banana, cherry
+
+# Loop Through the Index Numbers
+thistuple = ("apple", "banana", "cherry")
+for i in range(len(thistuple)):
+    print(thistuple[i]) ## Output: apple, banana, cherry
+
+# Using a While Loop
+thistuple = ("apple", "banana", "cherry")
+i = 0
+while i < len(thistuple):
+    print(thistuple[i]) ## Output: apple, banana, cherry
+    i = i + 1
+
+
+
